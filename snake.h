@@ -13,12 +13,15 @@ private:
     CPoint aphel_pos;
     CPoint waz_pos;
     CPoint waz_dir;
+    CPoint pause_dir;
     int snek_size;
     int time_cap;
     int timer;
     int points;
     int level;
     bool fail;
+    bool pause;
+    bool help;
     list<CPoint> old_pos;
 public:
   CSnake(CRect r, char _c = ' ');
@@ -27,6 +30,8 @@ public:
   void move_waz(CPoint direction);
   bool handleEvent(int key);
   bool in_frame();
+  void pauses();
+  void restart();
 };
 
 #endif
