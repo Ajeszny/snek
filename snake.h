@@ -18,6 +18,7 @@ private:
     int timer;
     int points;
     int level;
+    bool fail;
     list<CPoint> old_pos;
 public:
   CSnake(CRect r, char _c = ' ');
@@ -25,7 +26,7 @@ public:
   void Apfel();
   void move_waz(CPoint direction);
   bool handleEvent(int key);
-
+  bool in_frame();
 };
 
 #endif
